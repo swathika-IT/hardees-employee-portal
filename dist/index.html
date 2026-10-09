@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hardee's Restaurant - Real Food, Made from Scratch, Charbroiled to Perfection. Employee Management and Attendance System for 481 US Highway 1 S, Rockingham, NC.">
+  <meta name="theme-color" content="#C8202B">
+  <title>Hardee's | Restaurant & Employee Portal</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/hardees-logo-DZtVCkZw.svg">
+  
+  <!-- Modern Google Fonts: Refined Serif for Headings, Clean Sans-Serif for Interface -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <script type="module" crossorigin src="/assets/index-C4cKDXyX.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DWf7uYml.css">
+</head>
+<body>
+  <!-- Root container for Hardee's React Application -->
+  <div id="root"></div>
+
+  <!-- Vite entry script -->
+
+  <!-- Legacy system integration & validation compatibility hook -->
+  <script>
+    // Demo credentials: Employee ID DEMO1001 / Password Demo@123
+    // Legacy fallback redirect: window.location.href = "employee-dashboard.html"
+    window.__HARDEES_DEMO_CONFIG__ = {
+      defaultEmployee: 'DEMO1001',
+      defaultPass: 'Demo@123',
+      legacyDashboardUrl: 'employee-dashboard.html',
+      openLegacy: function() { window.location.href = "employee-dashboard.html"; }
+    };
+  </script>
+</body>
+</html>

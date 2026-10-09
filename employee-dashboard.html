@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo employee dashboard for Hardee's Rockingham location.">
+    <title>Employee Dashboard | Hardee's</title>
+    <link rel="stylesheet" href="css/employee-dashboard.css">
+</head>
+<body>
+    <div class="dashboard-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <a href="index.html" class="sidebar-logo" aria-label="Hardee's home">
+                    <img src="images/hardees-logo.svg" alt="Hardee's">
+                </a>
+                <div class="demo-label"><span></span> DEMO EMPLOYEE SYSTEM</div>
+                <p class="demo-note">Simulated demonstration. No payroll or employee records are stored.</p>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Employee navigation">
+                <p class="nav-label">EMPLOYEE PORTAL</p>
+                <a class="nav-item active" href="#dashboard" data-section="dashboard">
+                    <span class="nav-icon">⌂</span><span>Dashboard</span>
+                </a>
+                <a class="nav-item" href="#checkin" data-section="checkin">
+                    <span class="nav-icon">◉</span><span>Check In / Check Out</span>
+                </a>
+                <a class="nav-item" href="#schedule" data-section="schedule">
+                    <span class="nav-icon">▦</span><span>My Schedule</span>
+                </a>
+                <a class="nav-item" href="#hours" data-section="hours">
+                    <span class="nav-icon">◷</span><span>My Hours</span>
+                </a>
+                <a class="nav-item" href="#performance" data-section="performance">
+                    <span class="nav-icon">↗</span><span>Performance</span>
+                </a>
+                <a class="nav-item" href="#pay" data-section="pay">
+                    <span class="nav-icon">$</span><span>Pay Statements</span>
+                </a>
+                <a class="nav-item" href="#profile" data-section="profile">
+                    <span class="nav-icon">○</span><span>Profile</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="employee-mini-card">
+                    <div class="avatar">JM</div>
+                    <div>
+                        <strong>Jordan Miller</strong>
+                        <span>DEMO1001</span>
+                    </div>
+                </div>
+                <button class="logout-button" id="logoutButton" type="button">
+                    <span aria-hidden="true">↪</span> Logout
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <button class="mobile-menu" id="mobileMenuButton" type="button" aria-label="Open navigation">☰</button>
+                <div class="topbar-title">
+                    <span class="eyebrow">EMPLOYEE DASHBOARD</span>
+                    <h1>My Workspace</h1>
+                </div>
+                <div class="topbar-actions">
+                    <div class="system-status"><span></span> Demo system online</div>
+                    <button class="icon-button" type="button" aria-label="Notifications">◌<i></i></button>
+                    <div class="profile-chip">
+                        <span class="avatar small">JM</span>
+                        <div><strong>Jordan Miller</strong><small>Crew Member</small></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content" id="dashboard">
+                <section class="welcome-row">
+                    <div>
+                        <p class="welcome-kicker">MONDAY, <span id="currentDate">October 8, 2026</span></p>
+                        <h2>Welcome back, Jordan!</h2>
+                        <p class="welcome-copy">Here is your latest team and work information.</p>
+                    </div>
+                    <div class="current-time-card">
+                        <span>LOCAL TIME</span>
+                        <strong id="currentTime">--:--:--</strong>
+                        <small>Rockingham, NC</small>
+                    </div>
+                </section>
+
+                <section class="overview-grid">
+                    <article class="hero-card">
+                        <div class="hero-card-copy">
+                            <span class="card-kicker">TODAY'S SHIFT</span>
+                            <h3>Morning shift</h3>
+                            <p><span>◷</span> 5:30 AM – 2:00 PM</p>
+                            <p><span>⌖</span> Rockingham, NC</p>
+                        </div>
+                        <div class="status-card">
+                            <span class="status-label">CURRENT WORK STATUS</span>
+                            <div class="status-pill" id="workStatus"><span></span> Checked Out</div>
+                            <button class="checkin-button" id="checkInButton" type="button">
+                                <span>✓</span> CHECK IN
+                            </button>
+                            <small>Clock in to begin your shift.</small>
+                        </div>
+                    </article>
+
+                    <article class="metric-card red-card">
+                        <div class="metric-icon">◷</div>
+                        <div><span>Today's worked hours</span><strong id="workedHours">0.0</strong><small>of 8.0 scheduled hours</small></div>
+                    </article>
+
+                    <article class="metric-card yellow-card">
+                        <div class="metric-icon">▥</div>
+                        <div><span>This week's total hours</span><strong>32.0</strong><small>4 hours remaining</small></div>
+                    </article>
+
+                    <article class="metric-card neutral-card">
+                        <div class="metric-icon">★</div>
+                        <div><span>Performance score</span><strong>94</strong><small>Excellent performance</small></div>
+                    </article>
+
+                    <article class="metric-card neutral-card">
+                        <div class="metric-icon">✓</div>
+                        <div><span>Attendance percentage</span><strong>98%</strong><small>Last 30 days</small></div>
+                    </article>
+                </section>
+
+                <section class="content-grid">
+                    <article class="panel activity-panel">
+                        <div class="panel-heading">
+                            <div><span class="eyebrow">WORKSPACE</span><h3>Recent activity</h3></div>
+                            <button type="button">View all</button>
+                        </div>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon success">✓</div>
+                                <div><strong>Shift completed</strong><p>Yesterday · 5:30 AM – 2:00 PM</p></div>
+                                <span>8.0 hrs</span>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon success">✓</div>
+                                <div><strong>Schedule confirmed</strong><p>Today · Morning shift</p></div>
+                                <span>Confirmed</span>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon muted">↗</div>
+                                <div><strong>Performance reviewed</strong><p>Monday · Team evaluation</p></div>
+                                <span>94 score</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="panel upcoming-panel">
+                        <div class="panel-heading">
+                            <div><span class="eyebrow">NEXT UP</span><h3>Upcoming shift</h3></div>
+                            <span class="date-badge">OCT 09</span>
+                        </div>
+                        <div class="shift-detail">
+                            <div class="shift-date"><strong>09</strong><span>OCT</span></div>
+                            <div><strong>Morning shift</strong><p>5:30 AM – 2:00 PM</p><small>Rockingham, NC · 8 hours</small></div>
+                        </div>
+                        <div class="schedule-row"><span>Shift</span><strong>Opening</strong></div>
+                        <div class="schedule-row"><span>Location</span><strong>Rockingham, NC</strong></div>
+                        <button class="secondary-button" type="button">View schedule</button>
+                    </article>
+                </section>
+
+                <section class="profile-strip">
+                    <div class="profile-avatar">JM</div>
+                    <div class="profile-info">
+                        <span class="eyebrow">EMPLOYEE PROFILE</span>
+                        <h3>Jordan Miller</h3>
+                        <p>Employee ID: <strong>DEMO1001</strong> · Job title: <strong>Crew Member</strong> · Location: <strong>Rockingham, NC</strong></p>
+                    </div>
+                    <div class="profile-details">
+                        <div><span>Employee ID</span><strong>DEMO1001</strong></div>
+                        <div><span>Job title</span><strong>Crew Member</strong></div>
+                        <div><span>Location</span><strong>Rockingham, NC</strong></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
